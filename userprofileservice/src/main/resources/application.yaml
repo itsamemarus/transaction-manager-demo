@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: USER-PROFILE
+  h2:
+    console:
+      enabled: true  # Enable H2 console
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=30
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+jwt:
+  secret: "mySecret"
+  expiration: 999999999
+server:
+  port: 9001
+  servlet:
+    context-path: /api
+

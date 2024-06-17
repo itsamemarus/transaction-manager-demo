@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: TMS
+  h2:
+    console:
+      enabled: true  # Enable H2 console
+  datasource:
+    url: jdbc:h2:tcp://localhost:9090/mem:testdb;AUTO_SERVER=TRUE;
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+
+user-profile-service:
+  url: localhost:9001/api
+server:
+  port: 9000
